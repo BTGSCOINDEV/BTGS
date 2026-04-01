@@ -1,0 +1,26 @@
+build/
+build-win/
+*.exe
+*.o
+.idea/
+.vscode/
+build_win/
+# Secrets
+.env
+*.conf
+*.key
+*.pem
+wallet.dat
+
+# Databases & Large Files
+db/
+aureus_db/
+*.log
+*.tar.gz
+
+# Binaries
+Fulcrum
+FulcrumAdmin
+
+# Node.js
+node_modules/
