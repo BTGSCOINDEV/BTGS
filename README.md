@@ -31,7 +31,7 @@ Building the node and command-line interface is straightforward. You only need t
     cmake ..
     make -j$(nproc)
     ```
-*The binary files (`bitcoingoldd` and `bitcoingold-cli`) will be located in the `src/` directory within your build folder.*
+*The binary files (`bitcoingoldd` and `bitcoingold-cli`) will be located in the `bin/` directory within your build folder.*
 
 ---
 
