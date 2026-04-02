@@ -1,79 +1,77 @@
-Bitcoin Core integration/staging tree
-=====================================
+# 🪙 Bitcoin Gold BTGS (BTGS Core)
+**Next-Generation PoW Blockchain | SHA-256 | BTG-20 Inscriptions Support**
 
-https://bitcoincore.org
+---
 
-For an immediately usable, binary version of the Bitcoin Core software, see
-https://bitcoincore.org/en/download/.
+## 📊 Tokenomics & Supply Metrics
+* **Total Max Supply:** 26,000,000 BTGS
+* **Developer Fund:** 2,500,000 BTGS (Only **9.6%**) - Reserved for infrastructure, security audits, and ecosystem scaling.
+* **Community Allocation:** 23,500,000 BTGS - Distributed via decentralized mining.
 
-What is Bitcoin Core?
----------------------
+## ⚙️ Technical Core
+* **Algorithm:** SHA-256 (Industrial-grade security).
+* **Protocol:** Native support for **BTG-20** (Inscriptions/Ordinals), allowing decentralized deployment, minting, and transfer of digital artifacts directly on the BTGS blockchain (similar to BRC-20).
+* **Infrastructure:** High-performance LevelDB integration for rapid node synchronization and data integrity.
 
-Bitcoin Core connects to the Bitcoin peer-to-peer network to download and fully
-validate blocks and transactions. It also includes a wallet and graphical user
-interface, which can be optionally built.
+---
 
-Further information about Bitcoin Core is available in the [doc folder](/doc).
+## 🛠 Build Instructions (Linux)
+Building the node and command-line interface is straightforward. You only need to create a build directory and use CMake.
 
-License
--------
+### **Building `bitcoingoldd` and `bitcoingold-cli`**
+1.  **Clone the Repository:**
+    ```bash
+    git clone [https://github.com/BTGSCOINDEV/BTGS.git](https://github.com/BTGSCOINDEV/BTGS.git)
+    cd BTGS
+    ```
 
-Bitcoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
-information or see https://opensource.org/license/MIT.
+2.  **Configure and Build:**
+    ```bash
+    mkdir build && cd build
+    cmake ..
+    make -j$(nproc)
+    ```
+*The binary files (`bitcoingoldd` and `bitcoingold-cli`) will be located in the `src/` directory within your build folder.*
 
-Development Process
--------------------
+---
 
-The `master` branch is regularly built (see `doc/build-*.md` for instructions) and tested, but it is not guaranteed to be
-completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
-regularly from release branches to indicate new official, stable release versions of Bitcoin Core.
+## 📦 Official Releases
+We provide precompiled, stable binaries for all major platforms in the **Releases** section:
+* **Linux:** Stable ELF binaries for server environments and node operators.
+* **Windows:** Portable and installer versions (`.exe`).
+* **GUI Wallets:** Full Qt-based graphical interfaces for both Windows and Linux users.
 
-The https://github.com/bitcoin-core/gui repository is used exclusively for the
-development of the GUI. Its master branch is identical in all monotree
-repositories. Release branches and tags do not exist, so please do not fork
-that repository unless it is for development reasons.
+---
 
-The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md)
-and useful hints for developers can be found in [doc/developer-notes.md](doc/developer-notes.md).
+## 🌐 Ecosystem & Community Links
 
-Testing
--------
+| Resource | Official Links |
+| :--- | :--- |
+| **Official Website** | [btgscoin.site](https://btgscoin.site) \| [bitcoingold.site](https://bitcoingold.site) |
+| **Block Explorer** | [explorer.btgscoin.site](https://explorer.btgscoin.site) \| [explore.bitcoingold.site](https://explore.bitcoingold.site) |
+| **BitcoinTalk** | [Official BTGS Announcement](https://bitcointalk.org/index.php?topic=5579096.msg66572040#msg66572040) |
+| **Telegram Group** | [BTGS Community](https://t.me/BitcoinBTGS) |
+| **Discord Server** | [Developer & Node Support](https://discord.gg/7wJD7hfGf) |
+| **X (Twitter)** | [@BitcoinBTGS](https://x.com/BitcoinBTGS) |
 
-Testing and code review is the bottleneck for development; we get more pull
-requests than we can review and test on short notice. Please be patient and help out by testing
-other people's pull requests, and remember this is a security-critical project where any mistake might cost people
-lots of money.
+---
 
-### Automated Testing
+## ⚡ Electrum Servers (Infrastructure)
+For developers and light-wallet users, our Electrum servers are active and support both encrypted and non-encrypted connections:
 
-Developers are strongly encouraged to write [unit tests](src/test/README.md) for new code, and to
-submit new unit tests for old code. Unit tests can be compiled and run
-(assuming they weren't disabled during the generation of the build system) with: `ctest`. Further details on running
-and extending unit tests can be found in [/src/test/README.md](/src/test/README.md).
+* **Host 1:** `electrum.btgscoin.site`
+* **Host 2:** `electrum.bitcoingold.site`
 
-There are also [regression and integration tests](/test), written
-in Python.
-These tests can be run (if the [test dependencies](/test) are installed) with: `build/test/functional/test_runner.py`
-(assuming `build` is your build directory).
+**Port Configuration:**
+* **TCP Port:** `50001` (Standard)
+* **SSL Port:** `50002` (Secure)
 
-The CI (Continuous Integration) systems make sure that every pull request is tested on Windows, Linux, and macOS.
-The CI must pass on all commits before merge to avoid unrelated CI failures on new pull requests.
+---
 
-### Manual Quality Assurance (QA) Testing
+## 💡 BTG-20 Protocol
+The **BTG-20** protocol is our answer to the growing demand for on-chain data. By leveraging the security of SHA-256, users can "inscribe" data into the BTGS blockchain, creating a permanent, immutable record for tokens and digital art, mirroring the success of BRC-20 on the Bitcoin network.
 
-Changes should be tested by somebody other than the developer who wrote the
-code. This is especially important for large or high-risk changes. It is useful
-to add a test plan to the pull request description if testing the changes is
-not straightforward.
+---
 
-Translations
-------------
-
-Changes to translations as well as new translations can be submitted to
-[Bitcoin Core's Transifex page](https://explore.transifex.com/bitcoin/bitcoin/).
-
-Translations are periodically pulled from Transifex and merged into the git repository. See the
-[translation process](doc/translation_process.md) for details on how this works.
-
-**Important**: We do not accept translation changes as GitHub pull requests because the next
-pull from Transifex would automatically overwrite them again.
+## 📄 License
+Bitcoin Gold BTGS is open-source software released under the **MIT License**. See the `COPYING` file for more details.
