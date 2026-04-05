@@ -66,6 +66,8 @@ For developers and light-wallet users, our Electrum servers are active and suppo
 **Port Configuration:**
 * **TCP Port:** `50001` (Standard)
 * **SSL Port:** `50002` (Secure)
+* **WSS Port:** `50005` (Secure)
+
 
 ---
 
