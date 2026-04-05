@@ -50,6 +50,7 @@ We provide precompiled, stable binaries for all major platforms in the **Release
 | **Official Website** | [btgscoin.site](https://btgscoin.site) \| [bitcoingold.site](https://bitcoingold.site) |
 | **Block Explorer** | [explorer.btgscoin.site](https://explorer.btgscoin.site) \| [explore.bitcoingold.site](https://explore.bitcoingold.site) |
 | **BitcoinTalk** | [Official BTGS Announcement](https://bitcointalk.org/index.php?topic=5579096.msg66572040#msg66572040) |
+| **API** | [API](https://api.bitcoingold.site) |
 | **Telegram Group** | [BTGS Community](https://t.me/BitcoinBTGS) |
 | **Discord Server** | [Developer & Node Support](https://discord.gg/7wJD7hfGf) |
 | **X (Twitter)** | [@BitcoinBTGS](https://x.com/BitcoinBTGS) |
