@@ -47,6 +47,7 @@ We provide precompiled, stable binaries for all major platforms in the **Release
 
 | Resource | Official Links |
 | :--- | :--- |
+| **ALGORITHM** | [SHA-256](SHA-256) |
 | **Official Website** | [btgscoin.site](https://btgscoin.site) \| [bitcoingold.site](https://bitcoingold.site) |
 | **Block Explorer** | [explorer.btgscoin.site](https://explorer.btgscoin.site) \| [explore.bitcoingold.site](https://explore.bitcoingold.site) |
 | **BitcoinTalk** | [Official BTGS Announcement](https://bitcointalk.org/index.php?topic=5579096.msg66572040#msg66572040) |
