@@ -125,6 +125,7 @@ public:
         assert(genesis.hashMerkleRoot == uint256{"885cc77959f33827781ffbc175d11fba5079f375280e2b5213123ffeccb174af"});
 
         vSeeds.emplace_back("seed.bitcoingold.site");
+        vSeeds.emplace_back("seed.btgscoin.site");
         vSeeds.emplace_back("185.27.135.131");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,38);
