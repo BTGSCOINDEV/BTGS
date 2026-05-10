@@ -102,8 +102,8 @@ public:
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].threshold = 1815;
         consensus.vDeployments[Consensus::DEPLOYMENT_TAPROOT].period = 2016;
 
-        consensus.nMinimumChainWork = uint256{"0000000000000000000000000000000000000000000000000000000010000100"};
-        consensus.defaultAssumeValid = uint256{"0000000d1c5a497963a46c0348cb4346779c52d9e1d7cc8b5efb1be0a4a0f964"}; //0
+        consensus.nMinimumChainWork = uint256{"0000000000000000000000000000000000000000000000c881c9a24f9120650a"};
+        consensus.defaultAssumeValid = uint256{"00000000000000138aa6a00283533f9c13ba50f210479bd6abee12f2a52d2dab"}; // 9065
 
         /**
          * The message start string is designed to be unlikely to occur in normal data.
@@ -145,9 +145,10 @@ public:
         };
 
         chainTxData = ChainTxData{
-            .nTime    = 1756758362,
-            .tx_count = 1,
-            .dTxRate  = 0.01,
+            // Data from BTGS prod node: getchaintxstats 2016 00000000000000138aa6a00283533f9c13ba50f210479bd6abee12f2a52d2dab
+            .nTime    = 1777538530,
+            .tx_count = 11394,
+            .dTxRate  = 0.002086704321023651,
         };
     }
 };

@@ -1,15 +1,15 @@
 name: Bug report
-description: Submit a new bug report.
+description: Submit a BTGS Core bug report.
 labels: [bug]
 body:
   - type: markdown
     attributes:
       value: |
-        ## This issue tracker is only for technical issues related to Bitcoin Core.
+        ## This issue tracker is only for technical issues related to Bitcoin Gold BTGS Core.
 
-        * General bitcoin questions and/or support requests should use Bitcoin StackExchange at https://bitcoin.stackexchange.com.
-        * For reporting security issues, please read instructions at https://bitcoincore.org/en/contact/.
-        * If the node is "stuck" during sync or giving "block checksum mismatch" errors, please ensure your hardware is stable by running `memtest` and observe CPU temperature with a load-test tool such as `linpack` before creating an issue.
+        * Do not include private keys, wallet passphrases, RPC passwords, VPS credentials, or other secrets.
+        * For security reports, read the repository security policy before opening a public issue.
+        * If a node is stuck during sync or shows block checksum errors, check disk health, memory, and CPU temperature before filing an issue.
 
         ----
   - type: checkboxes
@@ -17,20 +17,20 @@ body:
       label: Is there an existing issue for this?
       description: Please search to see if an issue already exists for the bug you encountered.
       options:
-      - label: I have searched the existing issues
-        required: true
+        - label: I have searched the existing issues
+          required: true
   - type: textarea
     id: current-behaviour
     attributes:
       label: Current behaviour
-      description: Tell us what went wrong
+      description: Tell us what went wrong.
     validations:
       required: true
   - type: textarea
     id: expected-behaviour
     attributes:
       label: Expected behaviour
-      description: Tell us what you expected to happen
+      description: Tell us what you expected to happen.
     validations:
       required: true
   - type: textarea
@@ -38,9 +38,8 @@ body:
     attributes:
       label: Steps to reproduce
       description: |
-        Tell us how to reproduce your bug. Please attach related screenshots if necessary.
-        * Run-time or compile-time configuration options
-        * Actions taken
+        Tell us how to reproduce the bug.
+        Include runtime or compile-time configuration options, commands, and screenshots if useful.
     validations:
       required: true
   - type: textarea
@@ -48,19 +47,17 @@ body:
     attributes:
       label: Relevant log output
       description: |
-        Please copy and paste any relevant log output or attach a debug log file.
-
-        You can find the debug.log in your [data dir.](https://github.com/bitcoin/bitcoin/blob/master/doc/files.md#data-directory-location)
-
-        Please be aware that the debug log might contain personally identifying information.
+        Paste only the relevant log lines or attach a redacted debug log.
+        The debug log can contain IP addresses, local paths, wallet labels, or other identifying information.
     validations:
       required: false
   - type: dropdown
     attributes:
-      label: How did you obtain Bitcoin Core
+      label: How did you obtain BTGS Core?
       multiple: false
       options:
         - Compiled from source
+        - GitHub Actions artifact
         - Pre-built binaries
         - Package manager
         - Other
@@ -69,25 +66,22 @@ body:
   - type: input
     id: core-version
     attributes:
-      label: What version of Bitcoin Core are you using?
-      description: Run `bitcoind --version` or in Bitcoin-QT use `Help > About Bitcoin Core`
-      placeholder: e.g. v24.0.1 or master@e1bf547
+      label: What version of BTGS Core are you using?
+      description: Run `btgsd --version`, `bitcoind --version`, or in BTGS-Qt use `Help > About BTGS-Qt`, depending on your build.
+      placeholder: e.g. v30.2.1 or main@73628c5
     validations:
       required: true
   - type: input
     id: os
     attributes:
       label: Operating system and version
-      placeholder: e.g. "MacOS Ventura 13.2" or "Ubuntu 22.04 LTS"
+      placeholder: e.g. "macOS Sonoma 14.7" or "Ubuntu 24.04 LTS"
     validations:
       required: true
   - type: textarea
     id: machine-specs
     attributes:
       label: Machine specifications
-      description: |
-        What are the specifications of the host machine?
-        e.g. OS/CPU and disk type, network connectivity
+      description: CPU, RAM, disk type, network connectivity, and whether this is a mining/pool node.
     validations:
       required: false
-

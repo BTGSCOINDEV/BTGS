@@ -143,7 +143,7 @@ define $(package)_config_cmds
 endef
 
 define $(package)_build_cmds
-  cmake --build . -- $$(filter -j%,$$(MAKEFLAGS))
+  cmake --build . --parallel $$(if $$(JOBS),$$(JOBS),1)
 endef
 
 define $(package)_stage_cmds

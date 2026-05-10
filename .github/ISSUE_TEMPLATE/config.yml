@@ -1,8 +1,8 @@
 blank_issues_enabled: true
 contact_links:
-  - name: Bitcoin Core Security Policy
-    url: https://github.com/bitcoin/bitcoin/blob/master/SECURITY.md
-    about: View security policy
-  - name: Bitcoin Core Developers
-    url: https://bitcoincore.org
-    about: Bitcoin Core homepage
+  - name: BTGS security policy
+    url: https://github.com/BTGSCOINDEV/BTGS/blob/main/SECURITY.md
+    about: Read how to report security-sensitive issues.
+  - name: BTGS repository
+    url: https://github.com/BTGSCOINDEV/BTGS
+    about: Source code, releases, and project information.
