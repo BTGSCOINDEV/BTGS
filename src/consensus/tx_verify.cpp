@@ -11,8 +11,30 @@
 #include <consensus/validation.h>
 #include <primitives/transaction.h>
 #include <script/interpreter.h>
+#include <script/script.h>
 #include <util/check.h>
 #include <util/moneystr.h>
+
+#include <vector>
+
+namespace {
+static constexpr int BTGS_BURN_FREEZE_HEIGHT{9599};
+
+const CScript& BTGSBurnScriptPubKey()
+{
+    static const CScript burn_script_pubkey = CScript() << OP_0 << std::vector<unsigned char>{
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00, 0x00, 0x13, 0xd9, 0x93};
+    return burn_script_pubkey;
+}
+
+bool IsBTGSBurnSpend(const CScript& script_pubkey)
+{
+    return script_pubkey == BTGSBurnScriptPubKey();
+}
+} // namespace
 
 bool IsFinalTx(const CTransaction &tx, int nBlockHeight, int64_t nBlockTime)
 {
@@ -174,6 +196,11 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, TxValidationState& state, 
         const COutPoint &prevout = tx.vin[i].prevout;
         const Coin& coin = inputs.AccessCoin(prevout);
         assert(!coin.IsSpent());
+
+        if (nSpendHeight >= BTGS_BURN_FREEZE_HEIGHT && IsBTGSBurnSpend(coin.out.scriptPubKey)) {
+            return state.Invalid(TxValidationResult::TX_CONSENSUS, "bad-txns-burn-address-spend",
+                "attempted to spend frozen BTGS burn address output");
+        }
 
         // If prev is coinbase, check that it's matured
         if (coin.IsCoinBase() && nSpendHeight - coin.nHeight < COINBASE_MATURITY) {

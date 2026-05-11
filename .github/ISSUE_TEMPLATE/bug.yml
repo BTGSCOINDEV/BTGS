@@ -68,7 +68,7 @@ body:
     attributes:
       label: What version of BTGS Core are you using?
       description: Run `btgsd --version`, `bitcoind --version`, or in BTGS-Qt use `Help > About BTGS-Qt`, depending on your build.
-      placeholder: e.g. v30.2.1 or main@73628c5
+      placeholder: e.g. v30.2.2 or main@3ce9729
     validations:
       required: true
   - type: input
