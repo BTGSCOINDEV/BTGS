@@ -34,12 +34,16 @@ Building the node and command-line interface is straightforward. You only need t
 *The binary files (`bitcoingoldd` and `bitcoingold-cli`) will be located in the `bin/` directory within your build folder.*
 
 ---
+📦 Official Releases
+We provide precompiled, stable binaries for all major platforms. You can find the latest versions in the Releases section:
 
-## 📦 Official Releases
-We provide precompiled, stable binaries for all major platforms in the **Releases** section:
-* **Linux:** Stable ELF binaries for server environments and node operators.
-* **Windows:** Portable and installer versions (`.exe`).
-* **GUI Wallets:** Full Qt-based graphical interfaces for both Windows and Linux users.
+CLI (Command Line Interface): Stable binaries for Linux, Windows, and macOS (perfect for server environments and power users).
+
+GUI Wallets: User-friendly Qt-based graphical interfaces for Windows, Linux, and macOS.
+
+Mobile Wallet: Dedicated Android wallet (APK) for on-the-go BTGS transactions.
+
+All binaries are cryptographically signed and tested for security.
 
 ---
 
