@@ -31,10 +31,12 @@ Building the node and command-line interface is straightforward. You only need t
     cmake ..
     make -j$(nproc)
     ```
-*The binary files (`bitcoingoldd` and `bitcoingold-cli`) will be located in the `bin/` directory within your build folder.*
-
+*The binary files (`bitcoingoldd` and `bitcoingold-cli`) will be located in the `bin/` directory within your build folder.* 
+Want to automate this? You can easily fork this repository and enable the GitHub Actions workflow. Once enabled, the workflow will automatically trigger, build the binaries for all platforms (Linux, Windows, macOS, and Android), and prepare them for you instantly upon every push.
 ---
+
 📦 Official Releases
+
 We provide precompiled, stable binaries for all major platforms. You can find the latest versions in the Releases section:
 
 CLI (Command Line Interface): Stable binaries for Linux, Windows, and macOS (perfect for server environments and power users).
