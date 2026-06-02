@@ -1,5 +1,5 @@
 # 🪙 Bitcoin Gold BTGS (BTGS Core)
-**Next-Generation PoW Blockchain | SHA-256 | BTG-20 Inscriptions Support**
+**Next-Generation PoW Blockchain | SHA-256 | BGC-20 Inscriptions Support**
 
 ---
 
