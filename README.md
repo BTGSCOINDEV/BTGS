@@ -79,8 +79,8 @@ For developers and light-wallet users, our Electrum servers are active and suppo
 
 ---
 
-## 💡 BTG-20 Protocol
-The **BTG-20** protocol is our answer to the growing demand for on-chain data. By leveraging the security of SHA-256, users can "inscribe" data into the BTGS blockchain, creating a permanent, immutable record for tokens and digital art, mirroring the success of BRC-20 on the Bitcoin network.
+## 💡 BGC-20 Protocol
+The **BGC-20** protocol is our answer to the growing demand for on-chain data. By leveraging the security of SHA-256, users can "inscribe" data into the BTGS blockchain, creating a permanent, immutable record for tokens and digital art, mirroring the success of BRC-20 on the Bitcoin network.
 
 ---
 
