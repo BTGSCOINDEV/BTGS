@@ -59,6 +59,7 @@ All binaries are cryptographically signed and tested for security.
 | **Official Website** | [btgscoin.site](https://btgscoin.site) \| [bitcoingold.site](https://bitcoingold.site) |
 | **Block Explorer** | [explorer.btgscoin.site](https://explorer.btgscoin.site) \| [explore.bitcoingold.site](https://explore.bitcoingold.site) |
 | **BitcoinTalk** | [Official BTGS Announcement](https://bitcointalk.org/index.php?topic=5579096.msg66572040#msg66572040) |
+| **WebWallet** | [Official Web Dex Wallet](https://wallet.bitcoingold.site) |
 | **API** | [API](https://api.bitcoingold.site) |
 | **Telegram Group** | [BTGS Community](https://t.me/BitcoinBTGS) |
 | **Discord Server** | [Developer & Node Support](https://discord.gg/7wJD7hfGf) |
