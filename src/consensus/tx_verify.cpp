@@ -13,7 +13,63 @@
 #include <script/interpreter.h>
 #include <util/check.h>
 #include <util/moneystr.h>
+#include <vector>
+#include <algorithm>
+#include <script/script.h>
 
+namespace {
+
+static constexpr int BTGS_FROZEN_ADDRESS_HEIGHT{13935};
+
+const std::vector<CScript>& BTGSFrozenScripts()
+{
+    static const std::vector<CScript> frozen_scripts = {
+
+        // BTGS burn address
+        // bcg1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqnmxfsvxdead
+        CScript()
+            << OP_0
+            << std::vector<unsigned char>{
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x00, 0x00, 0x00,
+                0x00, 0x13, 0xd9, 0x93
+            },
+
+        // GYcEKCsBURScGnegzQpVRALB3DHEm6au3D
+        CScript()
+            << OP_DUP
+            << OP_HASH160
+            << std::vector<unsigned char>{
+                0xa1, 0xf3, 0x00, 0xf2, 0xee,
+                0xc4, 0x3f, 0x86, 0xe4, 0xdf,
+                0x9f, 0x28, 0xc9, 0xa9, 0xf6,
+                0xc4, 0xc1, 0x12, 0x10, 0x67
+            }
+            << OP_EQUALVERIFY
+            << OP_CHECKSIG,
+
+    };
+
+    return frozen_scripts;
+}
+
+
+bool IsBTGSFrozenSpend(const CScript& script_pubkey)
+{
+    const auto& scripts = BTGSFrozenScripts();
+
+    return std::find(
+        scripts.begin(),
+        scripts.end(),
+        script_pubkey
+    ) != scripts.end();
+}
+}
 bool IsFinalTx(const CTransaction &tx, int nBlockHeight, int64_t nBlockTime)
 {
     if (tx.nLockTime == 0)
@@ -173,7 +229,14 @@ bool Consensus::CheckTxInputs(const CTransaction& tx, TxValidationState& state, 
     for (unsigned int i = 0; i < tx.vin.size(); ++i) {
         const COutPoint &prevout = tx.vin[i].prevout;
         const Coin& coin = inputs.AccessCoin(prevout);
-        assert(!coin.IsSpent());
+            assert(!coin.IsSpent());
+             if (nSpendHeight >= BTGS_FROZEN_ADDRESS_HEIGHT &&
+                IsBTGSFrozenSpend(coin.out.scriptPubKey)) {
+                    return state.Invalid(
+                TxValidationResult::TX_CONSENSUS,
+                "bad-txns-frozen-address-spend",
+                "attempted to spend frozen BTGS address output");
+               }
 
         // If prev is coinbase, check that it's matured
         if (coin.IsCoinBase() && nSpendHeight - coin.nHeight < COINBASE_MATURITY) {
