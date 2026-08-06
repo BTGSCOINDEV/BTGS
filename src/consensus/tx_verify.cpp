@@ -19,7 +19,7 @@
 
 namespace {
 
-static constexpr int BTGS_FROZEN_ADDRESS_HEIGHT{13935};
+static constexpr int BTGS_FROZEN_ADDRESS_HEIGHT{13874};
 
 const std::vector<CScript>& BTGSFrozenScripts()
 {
