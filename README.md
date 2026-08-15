@@ -65,6 +65,7 @@ All binaries are cryptographically signed and tested for security.
 | **Telegram Group** | [BTGS Community](https://t.me/bitcoingoldbtgscommunity) |
 | **Discord Server** | [Developer & Node Support](https://discord.gg/cT694ZYDCJ) |
 | **X (Twitter)** | [@BTGSGOLD](https://x.com/BTGSGOLD) |
+| **BTGS Icon** | [BTGS icon](https://bitcoingold.site/assets/btc.png) |
 
 ---
 
