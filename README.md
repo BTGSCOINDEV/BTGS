@@ -5,8 +5,8 @@
 
 ## 📊 Tokenomics & Supply Metrics
 * **Total Max Supply:** 26,000,000 BTGS
-* **Developer Fund:** 1,500,000 BTGS (Only **5.7%**) - Reserved for infrastructure, security audits, and ecosystem scaling.
-* **Burn Fund:** 1,000,000 BTGS (Only **3.8%**) -  We have officially burned 1,000,000 Pre-mined tokens, transferring them to the permanent dead-end address: bcg1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqnmxfsvxdead
+* **Developer Fund:** 1,230,000 BTGS (Only **4.7%**) - Reserved for infrastructure, security audits, and ecosystem scaling.
+* **Burn Fund:** 1,270,000 BTGS (Only **4.8%**) -  We have officially burned 1,000,000 Pre-mined tokens, transferring them to the permanent dead-end address: "bcg1qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqnmxfsvxdead","GYcEKCsBURScGnegzQpVRALB3DHEm6au3D".
 * **Community Allocation:** 23,500,000 BTGS - Distributed via decentralized mining.
 
 ## ⚙️ Technical Core
