@@ -1,4 +1,9 @@
 # 🪙 Bitcoin Gold BTGS (BTGS Core)
+
+<p align="center">
+  <img src="https://bitcoingold.site/assets/btc.png" alt="Bitcoin Gold BTGS" width="100">
+</p>
+
 **Next-Generation PoW Blockchain | SHA-256 | BGC-20 Inscriptions Support**
 
 ---
