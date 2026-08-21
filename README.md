@@ -1,4 +1,4 @@
-# 🪙 Bitcoin Gold BTGS (BTGS Core)
+#  Bitcoin Gold BTGS (BTGS Core)
 
 <p align="center">
   <img src="https://bitcoingold.site/assets/btc.png" alt="Bitcoin Gold BTGS" width="100">
